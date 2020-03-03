@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: avro
+---
+testFramework: junit
+sourceLanguage: java
