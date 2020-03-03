@@ -1,0 +1,1 @@
+avro.producer.micronaut
