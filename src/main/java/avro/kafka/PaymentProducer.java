@@ -1,5 +1,6 @@
 package avro.kafka;
 
+import avro.model.Payment;
 import avro.model.User;
 import io.micronaut.configuration.kafka.annotation.KafkaClient;
 import io.micronaut.configuration.kafka.annotation.KafkaKey;
@@ -17,11 +18,11 @@ import org.apache.kafka.clients.producer.ProducerConfig;
                 value = "io.confluent.kafka.serializers.KafkaAvroSerializer"
         )}
 )
-public interface UserProducer {
+public interface PaymentProducer {
 
-    @Topic("user.created")
+    @Topic("payment.created")
     void create(@KafkaKey String key,
                 @Header(name = "tracerId") String traceId,
-                User user);
+                Payment payment);
 
 }

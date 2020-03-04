@@ -10,9 +10,9 @@ kafka:
   value:
     deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
     serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
-    schema:
-      registry:
-        url: "http://localhost:8081"
-    key:
-      serializer: org.apache.kafka.common.serialization.StringSerializer
-      deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  schema:
+    registry:
+      url: "http://localhost:8081"
+  key:
+    serializer: org.apache.kafka.common.serialization.StringSerializer
+    deserializer: org.apache.kafka.common.serialization.StringDeserializer

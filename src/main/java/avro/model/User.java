@@ -1,11 +1,14 @@
 package avro.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.apache.avro.Schema;
+import org.apache.avro.reflect.ReflectData;
+import org.apache.avro.specific.SpecificRecord;
 
 import java.util.UUID;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User {
+public class User implements SpecificRecord {
 
     private UUID id;
     private boolean checked;
@@ -14,7 +17,6 @@ public class User {
     private Integer status;
     private UUID event;
     private Object body;
-    // тип канала
     private String channel;
 
     public boolean isChecked() {
@@ -80,5 +82,20 @@ public class User {
 
     public void setChannel(String channel) {
         this.channel = channel;
+    }
+
+    @Override
+    public void put(int i, Object v) {
+
+    }
+
+    @Override
+    public Object get(int i) {
+        return null;
+    }
+
+    @Override
+    public Schema getSchema() {
+        return ReflectData.get().getSchema(User.class);
     }
 }

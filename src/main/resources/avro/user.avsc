@@ -1,0 +1,31 @@
+
+  "type" : "record",
+  "name" : "User",
+  "namespace" : "avro.model.impl",
+  "fields" : [ {
+    "name" : "checked",
+    "type" : "boolean"
+  }, {
+    "name" : "messageContext",
+    "type" : "map"
+  }, {
+    "name" : "source",
+    "type" : "string"
+  }, {
+    "name" : "status",
+    "type" : "int"
+  }, {
+    "name" : "event",
+    "type" : "string"
+    "logicalType" : "uuid"
+  }, {
+    "name" : "body",
+    "type" : "map"
+  }, {
+    "name" : "channel",
+    "type" : "string"
+  },{
+        "name" : "id",
+        "type" : "string",
+        "logicalType" : "uuid"
+  } ]
